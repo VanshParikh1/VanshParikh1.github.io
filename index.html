@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vansh Parikh — Full-Stack Developer</title>
+  <meta name="description" content="Vansh Parikh — full-stack developer building Zoink, SketchQuest, and Whiskr." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Instrument Serif = the italic display font. Outfit = the thin geometric sans. -->
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="nav">
+    <a href="#top" class="logo">Vansh Parikh</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a href="assets/resume.pdf" target="_blank" class="nav-resume">Resume ↗</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top">
+    <div class="hero-glow" aria-hidden="true"></div>
+
+    <p class="hero-kicker reveal">University of Toronto · Statistics + Computer Science + IMI · Class of '27</p>
+
+    <h1 class="hero-title">
+      <span class="hero-hi reveal">Hi, I'm Vansh</span>
+      <span class="hero-role reveal">Full-Stack Developer</span>
+    </h1>
+
+    <img class="hero-photo" src="assets/vansh-photo.png" alt="Vansh Parikh" />
+
+    <p class="hero-right reveal">
+      I build mobile apps and backends that actually ship, from
+      hackathon-winning AI pipelines to a rental marketplace launching on the App Store.
+    </p>
+
+    <div class="hero-proof reveal">
+      <span class="proof-num">1st</span>
+      <span class="proof-text">Place at EmberHacks 2026<br>out of 84 hackers</span>
+    </div>
+
+    <a href="#contact" class="btn hero-cta reveal">→&nbsp; Get in touch</a>
+  </section>
+
+  <!-- ================= MARQUEE ================= -->
+  <!-- The list is written twice so the CSS animation can loop seamlessly. -->
+  <div class="marquee" aria-label="Tech stack">
+    <div class="marquee-track">
+      <span>React Native</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span>
+      <span>Prisma</span><span>SwiftUI</span><span>Python</span><span>Gemini API</span><span>Stripe</span>
+      <span>React Native</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span>
+      <span>Prisma</span><span>SwiftUI</span><span>Python</span><span>Gemini API</span><span>Stripe</span>
+    </div>
+  </div>
+
+  <!-- ================= INTRO STATEMENT ================= -->
+  <section class="intro">
+    <p class="label reveal">/ Hello</p>
+    <p class="statement reveal">
+      I'm a stats student who can't stop building. I care about
+      <em>clean systems</em>, fast feedback loops, and
+      <span class="dim">products people actually open twice.</span>
+    </p>
+    <div class="chips reveal">
+      <span>Mobile</span><span>Backend</span><span>AI integrations</span>
+      <span>Data</span><span>Product</span>
+    </div>
+  </section>
+
+  <!-- ================= PROCESS ================= -->
+  <section class="process" id="process">
+    <p class="label reveal">/ How I work</p>
+    <h2 class="section-title reveal">From idea <em>to shipped</em></h2>
+
+    <div class="steps">
+      <article class="step reveal">
+        <span class="step-num">01</span>
+        <h3>Understand</h3>
+        <p>Figure out the real problem, the users, and the constraints before writing a line.</p>
+      </article>
+      <article class="step reveal">
+        <span class="step-num">02</span>
+        <h3>Build</h3>
+        <p>Type-safe, tested, and structured so the next feature is easier than the last.</p>
+      </article>
+      <article class="step reveal">
+        <span class="step-num">03</span>
+        <h3>Ship</h3>
+        <p>Get it in front of people, measure, fix what breaks, and keep going.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= WORK ================= -->
+  <!--
+    Each project has a .media box holding its screenshots/videos.
+    All media lives in assets/projects/. To swap a file, keep the same
+    filename, or update the src="..." below.
+    Muted clips with data-autoplay play by themselves while on screen.
+  -->
+  <section class="work" id="work">
+    <p class="label reveal">/ Selected work</p>
+    <h2 class="section-title reveal">Things I've <em>built</em></h2>
+
+    <div class="work-grid">
+
+      <article class="project project-wide reveal">
+        <div class="project-head">
+          <h3>SketchQuest</h3>
+            <span class="award">1st Place · EmberHacks 2026</span>
+          </div>
+        <!-- SketchQuest: left = sketch→game screenshots that swap back and forth,
+             right = full demo video (has sound, so it only plays on click) -->
+        <div class="media media-sketch">
+          <div class="sq-compare" id="sqCompare">
+            <!-- the game screenshot sits on top of the scan screenshot and is
+                 revealed left→right by a moving "scan line" (see style.css) -->
+            <div class="sq-frames" id="sqFrames">
+              <img class="sq-frame sq-base" src="assets/projects/sketchquest-scan.jpg" alt="SketchQuest: snap a photo of your hand-drawn level" loading="lazy">
+              <img class="sq-frame sq-top" src="assets/projects/sketchquest-game.jpg" alt="SketchQuest: the sketch rebuilt as a playable level" loading="lazy">
+              <span class="sq-scanline" aria-hidden="true"></span>
+            </div>
+            <div class="sq-tabs" role="tablist">
+              <button class="sq-tab active" data-i="0" role="tab"><em>01</em> Snap the sketch</button>
+              <span class="sq-arrow" aria-hidden="true">→</span>
+              <button class="sq-tab" data-i="1" role="tab"><em>02</em> Play the level</button>
+            </div>
+          </div>
+          <figure class="sq-video">
+            <video id="sqVideo" src="assets/projects/sketchquest-demo.mp4" poster="assets/projects/sketchquest-demo.jpg" preload="none" playsinline></video>
+            <button class="sq-play" id="sqPlay" aria-label="Play SketchQuest demo with sound">
+              <span class="sq-play-icon">▶</span>
+              <span class="sq-play-text">Watch the demo <small>2:46 · sound on</small></span>
+            </button>
+          </figure>
+        </div>
+        <div class="project-info">
+          <p>Draw a platformer level on paper, snap a photo, and play it seconds later. I led a team of three to build it, and it took 1st place at EmberHacks 2026 out of 84 participants.</p>
+          <p>Under the hood it's a React + TypeScript (Vite) frontend running Phaser 3, with a Node/Express backend. Gemini Vision reads the photo into structured JSON level data, validated with Zod. A reachability check replays the game's own physics to catch unbeatable levels, and Gemini makes the smallest repair needed before the level loads. A resilience layer with response caching, fallback data and rate limiting keeps it working under API latency and quota limits.</p>
+          <div class="project-foot">
+            <div class="tags"><span>React</span><span>TypeScript</span><span>Phaser 3</span><span>Gemini Vision</span></div>
+            <div class="links">
+              <a href="https://devpost.com/software/sketchquest" target="_blank" rel="noopener">Devpost ↗</a>
+              <a href="https://github.com/VanshParikh1/SketchQuest" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project project-wide reveal">
+        <div class="project-head">
+            <h3>Zoink</h3>
+            <span class="status-tag">In development</span>
+          </div>
+        <!-- Zoink: 3D spinning carousel. script.js arranges the .slide
+             elements in a ring and handles spin / drag / arrows. -->
+        <div class="media media-carousel">
+          <div class="carousel" id="zoinkCarousel">
+            <div class="carousel-stage">
+              <div class="carousel-ring">
+                <figure class="slide" data-label="Home feed"><img src="assets/projects/zoink-home.jpg" alt="Zoink home feed" loading="lazy" draggable="false"></figure>
+                <figure class="slide" data-label="Discover"><img src="assets/projects/zoink-discover.jpg" alt="Zoink search and categories" loading="lazy" draggable="false"></figure>
+                <figure class="slide" data-label="Listing"><img src="assets/projects/zoink-listing.jpg" alt="Zoink listing detail" loading="lazy" draggable="false"></figure>
+                <figure class="slide" data-label="Booking + price breakdown"><img src="assets/projects/zoink-booking.jpg" alt="Zoink booking dates and price breakdown" loading="lazy" draggable="false"></figure>
+                <figure class="slide" data-label="Chat"><img src="assets/projects/zoink-chat.jpg" alt="Zoink in-app chat" loading="lazy" draggable="false"></figure>
+                <figure class="slide" data-label="Inbox"><img src="assets/projects/zoink-inbox.jpg" alt="Zoink messages inbox" loading="lazy" draggable="false"></figure>
+                <figure class="slide" data-label="My bookings"><img src="assets/projects/zoink-my-bookings.jpg" alt="Zoink bookings with status" loading="lazy" draggable="false"></figure>
+                <figure class="slide" data-label="Handoff"><img src="assets/projects/zoink-handoff.jpg" alt="Zoink item handoff screen" loading="lazy" draggable="false"></figure>
+                <figure class="slide" data-label="Profile"><img src="assets/projects/zoink-profile.jpg" alt="Zoink profile" loading="lazy" draggable="false"></figure>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button class="carousel-btn" data-dir="-1" aria-label="Previous screen">←</button>
+              <p class="carousel-label" aria-live="polite"><em>01</em> <span>Home feed</span></p>
+              <button class="carousel-btn" data-dir="1" aria-label="Next screen">→</button>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <p>A peer-to-peer rental marketplace for Ontario university students. Instead of buying a camera, speaker or drill you'll use twice, you rent it from someone on campus.</p>
+          <p>Under the hood it's a TypeScript monorepo: a React Native/Expo app, an Express + PostgreSQL (Prisma) backend, and shared typed models between them. Booking conflicts are checked with a sorted-interval binary search (O(log n)) backed by a composite index. Payments run through Stripe Connect escrow with tiered commissions, deposit holds and HST. It's covered by a 362-test suite.</p>
+          <div class="project-foot">
+            <div class="tags"><span>React Native</span><span>Express</span><span>Postgres</span></div>
+            <a href="https://github.com/VanshParikh1/Zoink" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project project-wide reveal">
+        <div class="project-head">
+            <h3>Whiskr</h3>
+            <span class="status-tag">iOS</span>
+          </div>
+        <!-- Whiskr: four real screen recordings in phone frames.
+             muted + playsinline are required for browsers to allow autoplay. -->
+        <div class="media media-phones">
+          <figure class="phone">
+            <video src="assets/projects/whiskr-onboarding.mp4" poster="assets/projects/whiskr-onboarding.jpg" muted loop playsinline preload="metadata" data-autoplay></video>
+            <figcaption><em>01</em> Onboarding</figcaption>
+          </figure>
+          <figure class="phone">
+            <video src="assets/projects/whiskr-profile.mp4" poster="assets/projects/whiskr-profile.jpg" muted loop playsinline preload="metadata" data-autoplay></video>
+            <figcaption><em>02</em> Cat Profile</figcaption>
+          </figure>
+          <figure class="phone">
+            <video src="assets/projects/whiskr-chatbot.mp4" poster="assets/projects/whiskr-chatbot.jpg" muted loop playsinline preload="metadata" data-autoplay></video>
+            <figcaption><em>03</em> AI Chatbot</figcaption>
+          </figure>
+          <figure class="phone">
+            <video src="assets/projects/whiskr-reminders.mp4" poster="assets/projects/whiskr-reminders.jpg" muted loop playsinline preload="metadata" data-autoplay></video>
+            <figcaption><em>04</em> Reminders</figcaption>
+          </figure>
+        </div>
+        <div class="project-info">
+          <p>An iOS app that helps cat owners stay on top of their cat's health and daily care: a profile for each cat, weight and vet-visit tracking, care reminders, and an AI assistant for symptom questions.</p>
+          <p>Under the hood it's a solo-built SwiftUI app with an MVVM architecture across three tabs: 30+ views and models, a 7-step onboarding flow, and Codable-based local persistence. The chatbot calls OpenAI's Responses API directly over URLSession with typed Codable response and error parsing, and injects the live cat profile into the system prompt so answers are personalized. Reminders run on UserNotifications.</p>
+          <div class="project-foot">
+            <div class="tags"><span>Swift</span><span>SwiftUI</span><span>OpenAI API</span></div>
+            <a href="https://github.com/VanshParikh1/Whiskr" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section class="experience" id="experience">
+    <p class="label reveal">/ Experience</p>
+    <h2 class="section-title reveal">Work &amp; <em>school</em></h2>
+
+    <div class="jobs">
+      <article class="job reveal">
+        <div class="job-when">2027</div>
+        <div class="job-body">
+          <h3>University of Toronto Mississauga</h3>
+          <p class="job-meta">B.Sc. Statistics · Expected Nov 2027</p>
+          <p>Minors in Computer Science and in Business, Science &amp; Entrepreneurship (IMI).</p>
+        </div>
+      </article>
+      <article class="job reveal">
+        <div class="job-when">2026</div>
+        <div class="job-body">
+          <h3>Microsoft Power Platform Mentorship</h3>
+          <p class="job-meta">May – June 2026 · Copilot Studio, Power Automate, Dataverse, SharePoint, Power BI</p>
+          <p>Designed and shipped an end-to-end HR leave management system: Copilot Studio agents, multi-step Power Automate approval pipelines, and Dataverse data modeling, with SharePoint as a live knowledge source. Owned the full solution architecture.</p>
+        </div>
+      </article>
+      <article class="job reveal">
+        <div class="job-when">2025</div>
+        <div class="job-body">
+          <h3>Mobile Developer, African Geospace</h3>
+          <p class="job-meta">Sept – Dec 2025 · React Native, Expo, Flask</p>
+          <p>Stabilized the React Native/Expo environment, built navigation architecture and reusable UI components, integrated auth and backend APIs, and kept non-technical stakeholders in the loop.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="skills reveal">
+      <div><h4>Languages</h4><p>Python, TypeScript, Swift, Java, C, R, SQL</p></div>
+      <div><h4>Mobile</h4><p>React Native, Expo, SwiftUI, AVFoundation</p></div>
+      <div><h4>Backend &amp; Data</h4><p>Node.js, Express, Flask, PostgreSQL, Prisma, Stripe</p></div>
+      <div><h4>AI &amp; Tools</h4><p>Gemini API, OpenAI API, Git, Linux, Xcode</p></div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact">
+    <div class="contact-glow" aria-hidden="true"></div>
+    <p class="label reveal">/ Contact</p>
+    <h2 class="contact-title reveal">Let's build <em>something.</em></h2>
+    <a class="contact-email reveal" href="mailto:vansh.ashparikh@gmail.com">vansh.ashparikh@gmail.com</a>
+    <div class="contact-links reveal">
+      <a href="https://github.com/VanshParikh1" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/vanshparikh22/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://devpost.com/VanshParikh1" target="_blank" rel="noopener">Devpost ↗</a>
+      <a href="assets/resume.pdf" target="_blank">Resume ↗</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Vansh Parikh</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

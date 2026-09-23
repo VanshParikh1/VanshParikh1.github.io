@@ -1,0 +1,72 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.45in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+% ---------- Formatting ----------
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{noitemsep, topsep=1pt, leftmargin=*}
+\setlength{\parskip}{0pt}
+% ---------- Document ----------
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{Vansh Parikh}}\\[2pt]
+    \href{mailto:vansh.parikh@mail.utoronto.ca}{vansh.parikh@mail.utoronto.ca} \,|\,
+    GitHub: \href{https://github.com/VanshParikh1}{VanshParikh1} \,|\,
+    LinkedIn: \href{https://www.linkedin.com/in/vanshparikh22/}{vanshparikh22}
+\end{center}
+% ---------- Education ----------
+\section*{Education}
+\textbf{University of Toronto — Mississauga} \hfill Expected Graduation: November 2027\\
+Bachelor of Science in Statistics \quad Minors: Computer Science, Business, Science and Entrepreneurship (IMI Program)
+% ---------- Experience ----------
+\section*{Experience}
+\textbf{Microsoft Power Platform Mentorship} \hfill May 2026 -- June 2026\\
+\textit{Copilot Studio, Power Automate, Dataverse, SharePoint, Power BI}
+\begin{itemize}
+    \item Designed and shipped an end-to-end HR leave management system: Copilot Studio agents, Power Automate approval workflows, and Dataverse for structured employee data modeling.
+    \item Built multi-step approval pipelines with event-driven triggers and conditional logic, and connected Copilot Studio agents to SharePoint as a live knowledge source for document-driven retrieval.
+    \item Owned the end-to-end solution architecture across Copilot Studio, Dataverse, Power Automate, SharePoint, and Power BI reporting.
+\end{itemize}
+\textbf{African Geospace} \hfill September 2025 -- December 2025\\
+\textit{Mobile Developer — React Native, Expo, Flask}
+\begin{itemize}
+    \item Stabilized and upgraded the React Native/Expo development environment by resolving SDK and dependency conflicts, enabling reliable cross-device testing and deployment.
+    \item Built core mobile features including navigation architecture, category-based browsing, and reusable UI components to improve maintainability and scalability.
+    \item Integrated frontend systems with backend APIs, handling authentication, data flow, and debugging cross-system issues in a full-stack environment.
+    \item Communicated directly with non-technical stakeholders, translating technical progress into clear updates and adjusting priorities based on client feedback.
+\end{itemize}
+% ---------- Projects ----------
+\section*{Projects}
+\textbf{SketchQuest -- AI Sketch-to-Playable-Game Pipeline} \hfill \textbf{1st Place, EmberHacks 2026} (84 participants)\\
+\textit{React, TypeScript, Vite, Phaser 3, Node.js, Express, Gemini Vision API, Zod}\\
+\href{https://github.com/VanshParikh1/SketchQuest}{GitHub Repository}
+\begin{itemize}
+    \item Led a 3-person team to build an end-to-end pipeline converting a photographed hand-drawn platformer level into a playable Phaser 3 game, using Gemini Vision to interpret the sketch into structured JSON level data.
+    \item Designed a reachability validation and auto-repair loop that replays the game's own physics assumptions to detect unbeatable levels and has Gemini minimally repair them before load, preventing broken gameplay from reaching the player.
+    \item Engineered a resilience layer (response caching, mock/fallback data, request-rate limiting) around the Gemini API to keep the app fully demoable under latency and quota constraints.
+\end{itemize}
+\textbf{Zoink -- Peer-to-Peer Student Rental Marketplace} \hfill March 2026 -- Present\\
+\textit{React Native, Node.js, Express, PostgreSQL, Prisma, TypeScript}\\
+\href{https://github.com/VanshParikh1/Zoink}{GitHub Repository}
+\begin{itemize}
+    \item Architected a full-stack monorepo (React Native/Expo, Node.js/Express, PostgreSQL via Prisma, shared TypeScript DTOs) with secure RESTful APIs for auth, listings, image uploads, and booking state management, powering real-time listings, bookings, and in-app messaging.
+    \item Redesigned the booking-conflict check into a sorted-interval algorithm with O(log n) binary-search lookups and added a missing composite database index, eliminating a full-table scan on every booking accept/confirm; shipped with 31 new unit tests and zero regressions across a 362-test suite.
+    \item Designed and shipped a tiered commission and payout engine (rate tiers by daily listing price) with automated deposit capture/release tracking and HST handling, integrated with Stripe Connect for escrow and payouts.
+\end{itemize}
+\textbf{Whiskr -- AI-Powered Cat Wellness iOS Application} \hfill May 2025 -- August 2025\\
+\textit{Swift, SwiftUI, AVFoundation, UserNotifications, OpenAI API}\\
+\href{https://github.com/VanshParikh1/Whiskr}{GitHub Repository}
+\begin{itemize}
+    \item Designed and built a 3-tab MVVM iOS app solo (30+ SwiftUI views/models, a 7-step onboarding flow, and Codable-based local persistence) to help owners manage cat wellness and daily care routines.
+    \item Integrated OpenAI's Responses API (GPT-5-mini) directly over \texttt{URLSession} with typed \texttt{Codable} response/error parsing and dynamic system-prompt injection of live cat profile data, powering a personalized AI symptom-checker chatbot.
+\end{itemize}
+% ---------- Technical Skills ----------
+\section*{Technical Skills}
+\textbf{Languages:} Python, TypeScript, Swift, Java, C, R, SQL\\
+\textbf{Mobile:} React Native, Expo, SwiftUI, React Navigation, AVFoundation, Xcode, Android Studio\\
+\textbf{Backend \& Data:} Node.js, Express, Flask, PostgreSQL, Prisma ORM, REST APIs, Stripe\\
+\textbf{AI/ML \& Tools:} Gemini API, OpenAI API, React, Phaser, Git, UNIX/Linux, VS Code, Xcode
+\end{document}
